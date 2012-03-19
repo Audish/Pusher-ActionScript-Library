@@ -13,19 +13,10 @@
 	
     <property name="SRC_ROOT" value="${basedir}/src"/>
     <property name="DEPLOY_DIR" value="${basedir}/bin-ant"/>
-	<property name="SWC_NAME" value="Pusher-Actionscript-Library.swc"/>
+	<property name="SWC_NAME" value="Pusher-ActionScript-Library.swc"/>
 	
 	
-	<target name="get_git_commit" >
-		<exec executable="git" outputproperty="git.revision">
-			<arg value="log" />
-			<arg value="-1"/>
-			<arg value="--oneline" />
-		</exec>
-	</target>
-	
-	
-	<target name="main" depends="get_git_commit"> 
+	<target name="main"> 
 	 	 <compc 
 	 	 	output="${DEPLOY_DIR}/${SWC_NAME}" 
 	 	 	include-classes="com.pusher.Pusher"
@@ -33,7 +24,7 @@
 	 	 	target-player="11.0.0" 
 	 	 >
 	 	 	
-	 	 	<load-config filename="${FLEX_HOME}/frameworks/air-config.xml" />
+	 	 	<load-config filename="${FLEX_HOME}/frameworks/flex-config.xml" />
 	 	 	<source-path path-element="${SRC_ROOT}" /> 
 	 	 </compc>
 	</target>
