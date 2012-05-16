@@ -21,7 +21,7 @@
 	 	 	output="${DEPLOY_DIR}/${SWC_NAME}" 
 	 	 	include-classes="com.pusher.Pusher"
 	 	 	swf-version="13" 
-	 	 	target-player="11.0.0" 
+	 	 	target-player="11.1.0" 
 	 	 >
 	 	 	
 	 	 	<load-config filename="${FLEX_HOME}/frameworks/flex-config.xml" />
